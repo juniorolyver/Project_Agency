@@ -1,6 +1,5 @@
 @import 'variables'
 @import 'utilities'
-@import 'button'
 
 
 @include reset
@@ -130,25 +129,79 @@
                 border: transparent
                 box-shadow: 0 1px 10px #CCC         
 
-.btn
-    padding: .6rem 1rem 
-    border: 1px solid $light-color 
-    text-transform: uppercase
-    border-radius: 5px
-    transition: .3s
-    color: $light-color
 
-    &:hover
-        border-color: $primary-color
-        color: $primary-color
-    
-    &-primary
-        background-color: $primary-color
-        border-color: $primary-color
-        &:hover
-            background-color: transparent
+.jobs-container
+    background-color: $secondary-bg
+    padding: 3rem
 
-    &-rounded
-        margin-top: 1rem
-        border-radius: 2rem
-        padding: 1rem 1.5rem        
+    h2
+        @extend %section-title      
+
+    .jobs-list
+        display: flex
+        padding: 2rem 0      
+
+        .firts-job
+            width: 30%
+            height: 415px
+            margin: 0 2%
+            background-image: url('../img/job1.jpeg')
+            position: relative
+            cursor: pointer
+            transition: .5s
+            @extend %center-bg
+            @extend %card-hover
+
+        .other-jobs-container
+            display: flex  
+            flex-wrap: wrap
+            width: 68%
+
+            .job-card
+                width: 46%
+                height: 200px    
+                position: relative
+                cursor: pointer
+                margin-bottom: 15px
+                margin-right: 15px
+                @extend %center-bg
+                @extend %card-hover  
+
+            #job1
+                background-image: url('../img/job1.jpeg')  
+            
+            #job2
+                background-image: url('../img/job2.jpeg')
+
+            #job3
+                background-image: url('../img/job3.jpeg')    
+
+            #job4
+                background-image: url('../img/job4.jpeg')                          
+
+            #job5
+                background-image: url('../img/job5.jpeg')      
+
+
+        .job-card-cover
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            padding-top: 1.75rem
+            background-color: rgba(0, 0, 0, .6)
+            border: 3px solid $primary-color
+
+        .job-card-title
+            text-align: center
+            color: #fff
+            font-size: 2.2rem
+            transition: .5s
+            font-weight: bold
+
+        .job-card-description    
+            text-align: center 
+            color: #FFF  
+            padding: 1rem
+            font-size: .9rem
